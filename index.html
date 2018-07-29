@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>shyj</title>
+    <script type="text/javascript">
+      (function(html){
+        change()
+        function change(){
+          var w = html.clientWidth;
+          if(w>640){
+            w=640;
+          }
+          var size = Math.round(w/320*100);
+          html.style.fontSize = size+"px";
+        }
+        window.onresize = change;
+      })(document.documentElement);
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
